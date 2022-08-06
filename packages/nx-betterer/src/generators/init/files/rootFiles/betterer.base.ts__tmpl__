@@ -1,0 +1,7 @@
+import { typescript } from '@betterer/typescript';
+
+export const baseConfig = {
+  'stricter compilation': () =>
+    typescript('./tsconfig.lib.json', { strict: true, outDir: 'betterer-dist' })
+      .include('./src/**/*.ts')
+};

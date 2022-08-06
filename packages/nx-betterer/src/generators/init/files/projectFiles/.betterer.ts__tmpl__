@@ -1,0 +1,4 @@
+import {baseConfig} from '<%= bettererBaseConfigPath %>';
+export default {
+  ...baseConfig,
+};
