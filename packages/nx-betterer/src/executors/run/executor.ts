@@ -12,8 +12,6 @@ export default async function runExecutor(options: ExecutorOptions, context: Exe
     cwd: `${context.root}/${context.workspace.projects[context.projectName].root}`,
   });
 
-  console.log(result.runSummaries)
-
   return {
     success: !(result.worse.length > 0 || (options.ci && result.changed.length > 0)),
   };}
